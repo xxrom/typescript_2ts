@@ -1,3 +1,5 @@
+console.log('Hello');
+
 function Greeter(greeting: string) {
   this.greeting = greeting;
 }
