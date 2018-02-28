@@ -51,7 +51,7 @@ console.log(car);
 
 // functions
 function returnMyName(): FunctionStringCallback {
-  return myAge;
+  return myName;
 }
 console.log(returnMyName());
 
@@ -67,6 +67,47 @@ function multiply(value1: number, value2: number): number {
 }
 // console.log(multiply(2, 'Max')); // NaN
 console.log(multiply(2, 10));
+
+// function types
+let myMultiply: (val1: number, val2: number) => number;
+// myMultiply = sayHello; // error function
+// myMultiply(); // error function
+myMultiply = multiply;
+console.log(myMultiply(5, 2));
+
+
+// objects
+let userData: { name: string, age: number } = {
+  name: 'Nikita',
+  age: 26
+};
+
+// userData = { // порядок параметров не важен в объекте!
+//   a: 'hello', // error param name
+//   b: 22
+// };
+
+
+// complex object
+let complex: {data: number[], output: (all: boolean) => number[]} = {
+  data: [100, 3.99, 10],
+
+  output: function (all: boolean): number[] {
+    return this.data;
+  }
+};
+// complex= {};
+
+// type alias
+type Complex = {data: number[], output: (all: boolean) => number[]};
+
+let complex2: Complex = {
+  data: [100, 3.99, 10],
+
+  output: function (all: boolean): number[] {
+    return this.data;
+  }
+};
 
 
 console.log('End');

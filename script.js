@@ -50,5 +50,34 @@ function sayHello() {
 function multiply(value1, value2) {
     return value1 * value2;
 }
-console.log(multiply(2, 'Max')); // NaN
+// console.log(multiply(2, 'Max')); // NaN
+console.log(multiply(2, 10));
+// function types
+var myMultiply;
+// myMultiply = sayHello; // error function
+// myMultiply(); // error function
+myMultiply = multiply;
+console.log(myMultiply(5, 2));
+// objects
+var userData = {
+    name: 'Nikita',
+    age: 26
+};
+// userData = { // порядок параметров не важен в объекте!
+//   a: 'hello', // error param name
+//   b: 22
+// };
+// complex object
+var complex = {
+    data: [100, 3.99, 10],
+    output: function (all) {
+        return this.data;
+    }
+};
+var complex2 = {
+    data: [100, 3.99, 10],
+    output: function (all) {
+        return this.data;
+    }
+};
 console.log('End');
