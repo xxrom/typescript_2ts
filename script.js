@@ -31,9 +31,24 @@ var Color;
 })(Color || (Color = {}));
 var myColor = Color.Blue;
 console.log(myColor);
-// any
+// any , try to avoid it =)
 var car = 'BMW';
 console.log(car);
 car = { brand: 'bmw', series: 2 };
 console.log(car);
+// functions
+function returnMyName() {
+    return myAge;
+}
+console.log(returnMyName());
+// void
+function sayHello() {
+    console.log('Void!');
+    // return 0; // error void
+}
+// argument types
+function multiply(value1, value2) {
+    return value1 * value2;
+}
+console.log(multiply(2, 'Max')); // NaN
 console.log('End');

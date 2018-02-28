@@ -49,4 +49,24 @@ car = { brand: 'bmw', series: 2};
 console.log(car);
 
 
+// functions
+function returnMyName(): FunctionStringCallback {
+  return myAge;
+}
+console.log(returnMyName());
+
+// void
+function sayHello(): void {
+  console.log('Void!');
+  // return 0; // error void
+}
+
+// argument types
+function multiply(value1: number, value2: number): number {
+  return value1 * value2;
+}
+// console.log(multiply(2, 'Max')); // NaN
+console.log(multiply(2, 10));
+
+
 console.log('End');
