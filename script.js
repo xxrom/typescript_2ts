@@ -80,4 +80,19 @@ var complex2 = {
         return this.data;
     }
 };
+// union types
+// let myRealRealAge: any = 27;
+// myRealRealAge = '27';
+var myRealRealAge = 27;
+myRealRealAge = '27';
+// myRealRealAge = true; // error
+// check types
+var finalValue = 'A string';
+if (typeof finalValue === 'string') {
+    console.log('Final value a number');
+}
+// never
+function neverReturns() {
+    throw new Error('An error');
+}
 console.log('End');

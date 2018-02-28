@@ -50,8 +50,8 @@ console.log(car);
 
 
 // functions
-function returnMyName(): FunctionStringCallback {
-  return myName;
+function returnMyName(): number {
+  return myAge;
 }
 console.log(returnMyName());
 
@@ -108,6 +108,37 @@ let complex2: Complex = {
     return this.data;
   }
 };
+
+
+// union types
+// let myRealRealAge: any = 27;
+// myRealRealAge = '27';
+let myRealRealAge: number | string = 27;
+myRealRealAge = '27';
+// myRealRealAge = true; // error
+
+
+// check types
+let finalValue = 'A string';
+if (typeof finalValue === 'string') {
+  console.log('Final value a number');
+}
+
+
+// never
+function neverReturns(): never { // застревает в функции и никогда не выходит из нее
+  throw new Error('An error');
+}
+
+
+// Nullable Types
+let canBeNull: number | null = 12;
+canBeNull = null; // tsconfig strinctNullChecks: false => no error , if : true => error
+let canAlsoBeNull; // undefined
+canAlsoBeNull = null;
+let canThisBeAny = null; // only be null!
+canThisBeAny = 12; // error
+
 
 
 console.log('End');
