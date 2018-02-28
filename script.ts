@@ -28,6 +28,7 @@ hobbies = [100]; // no error
 console.log(typeof hobbies[0]);
 
 
+
 // typles
 let address: [string, number] = ['Super', 99];
 
