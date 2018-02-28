@@ -21,5 +21,19 @@ hobbies = [100]; // no error
 // hobbies = ['hello']; // no Error
 console.log(typeof hobbies[0]);
 // typles
-var address = ['Super', 99];
+var address = ['Super', 99]; // only two elements
+// enum
+var Color;
+(function (Color) {
+    Color[Color["Gray"] = 0] = "Gray";
+    Color[Color["Green"] = 100] = "Green";
+    Color[Color["Blue"] = 2] = "Blue"; // 2
+})(Color || (Color = {}));
+var myColor = Color.Blue;
+console.log(myColor);
+// any
+var car = 'BMW';
+console.log(car);
+car = { brand: 'bmw', series: 2 };
+console.log(car);
 console.log('End');

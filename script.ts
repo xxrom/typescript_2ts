@@ -30,7 +30,23 @@ console.log(typeof hobbies[0]);
 
 
 // typles
-let address: [string, number] = ['Super', 99];
+let address: [string, number] = ['Super', 99]; // only two elements
+
+// enum
+enum Color {
+  Gray, // 0
+  Green = 100, // 100 next would be 101
+  Blue = 2 // 2
+}
+
+let myColor: Color = Color.Blue;
+console.log(myColor);
+
+// any , try to avoid it =)
+let car: any = 'BMW';
+console.log(car);
+car = { brand: 'bmw', series: 2};
+console.log(car);
 
 
 console.log('End');
