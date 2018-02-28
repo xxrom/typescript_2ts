@@ -95,4 +95,11 @@ if (typeof finalValue === 'string') {
 function neverReturns() {
     throw new Error('An error');
 }
+// Nullable Types
+var canBeNull = 12;
+canBeNull = null; // tsconfig strinctNullChecks: false => no error , if : true => error
+var canAlsoBeNull; // undefined
+canAlsoBeNull = null;
+var canThisBeAny = null; // only be null!
+canThisBeAny = 12; // error
 console.log('End');
