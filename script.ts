@@ -1,21 +1,35 @@
 console.log('Hello');
 
-function Greeter(greeting: string) {
-  this.greeting = greeting;
-}
+let myName = 'Max';
 
-Greeter.prototype.greet = function() {
-  return "Hello, " + this.greeting;
-}
+// myName = 28;
 
-// Oops, we're passing an object when we want a string. This will print
-// "Hello, [object Object]" instead of "Hello, world" without error.
-let greeter = new Greeter("world");
+let myAge = 27.2;
+// myAge = 'Max';
 
-let button = document.createElement('button');
-button.textContent = "Say Hello";
-button.onclick = function() {
-  alert(greeter.greet());
-};
+let hasHobbies: boolean = false;
+// hasHobbies = 1;
 
-document.body.appendChild(button);
+// assign types;
+let myRealAge2; // Any by default
+myRealAge2 = 27;
+myRealAge2 = '27'
+
+let myRealAge: number;
+myRealAge = 27;
+// myRealAge = '27';
+
+// array
+// let hobbies = ["Cooking", "Sports"];
+// hobbies = [100]; // error
+let hobbies: any[] = ["Cooking", "Sports"];
+hobbies = [100]; // no error
+// hobbies = ['hello']; // no Error
+console.log(typeof hobbies[0]);
+
+
+// typles
+let address: [string, number] = ['Super', 99];
+
+
+console.log('End');

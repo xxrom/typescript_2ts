@@ -1,17 +1,25 @@
 "use strict";
 console.log('Hello');
-function Greeter(greeting) {
-    this.greeting = greeting;
-}
-Greeter.prototype.greet = function () {
-    return "Hello, " + this.greeting;
-};
-// Oops, we're passing an object when we want a string. This will print
-// "Hello, [object Object]" instead of "Hello, world" without error.
-var greeter = new Greeter("world");
-var button = document.createElement('button');
-button.textContent = "Say Hello";
-button.onclick = function () {
-    alert(greeter.greet());
-};
-document.body.appendChild(button);
+var myName = 'Max';
+// myName = 28;
+var myAge = 27.2;
+// myAge = 'Max';
+var hasHobbies = false;
+// hasHobbies = 1;
+// assign types;
+var myRealAge2; // Any by default
+myRealAge2 = 27;
+myRealAge2 = '27';
+var myRealAge;
+myRealAge = 27;
+// myRealAge = '27';
+// array
+// let hobbies = ["Cooking", "Sports"];
+// hobbies = [100]; // error
+var hobbies = ["Cooking", "Sports"];
+hobbies = [100]; // no error
+// hobbies = ['hello']; // no Error
+console.log(typeof hobbies[0]);
+// typles
+var address = ['Super', 99];
+console.log('End');
