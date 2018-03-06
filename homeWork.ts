@@ -23,6 +23,7 @@ console.log(Math.min(...numbers));
 // Exercise 4 - I have to think about Exercise 3 ...
 var newArray = [55, 20];
 // Array.prototype.push.apply(newArray, numbers);
+newArray.push(...numbers);
 console.log([...numbers, ...newArray]);
 
 // Exercise 5 - That's a well-constructed array.

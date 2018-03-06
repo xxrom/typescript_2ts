@@ -24,6 +24,7 @@ console.log(Math.min.apply(Math, numbers));
 // Exercise 4 - I have to think about Exercise 3 ...
 var newArray = [55, 20];
 // Array.prototype.push.apply(newArray, numbers);
+newArray.push.apply(newArray, numbers);
 console.log(numbers.concat(newArray));
 // Exercise 5 - That's a well-constructed array.
 // var testResults = [3.89, 2.99, 1.38];
