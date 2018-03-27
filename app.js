@@ -5,12 +5,19 @@ var MyMath;
         return diameter * PI;
     }
     MyMath.calculateCircumference = calculateCircumference;
+})(MyMath || (MyMath = {}));
+var MyMath;
+(function (MyMath) {
     function calculateRectangle(width, length) {
         return width * length;
     }
     MyMath.calculateRectangle = calculateRectangle;
 })(MyMath || (MyMath = {}));
+/// <reference path="circleMath.ts" />
+/// <reference path="rectangleMath.ts" />
 var PI = 2.99;
 console.log(MyMath.calculateRectangle(10, 20));
 console.log(MyMath.calculateCircumference(3));
 console.log(PI);
+// создаем один бандл и его загружаем в index.html
+// tsc --outFile app.js circleMath.ts rectangleMath.ts app.ts
