@@ -12,8 +12,15 @@
 
 // next import method
 import { PI, calcCirumference } from './math/circle';
-console.log(PI);
-console.log(calcCirumference(3));
+// import * as Circle from './math/circle'; // Circle.calc... ()
+// import { Component } from '@angular/core'; // angular imports from default node_modules folder
+import testDefaultReturn, { calculateRectangle } from './math/rectangle';
+
+console.log(PI); // 3.14
+console.log(calcCirumference(3)); // 9.42
+console.log(calculateRectangle(2, 3)); // 6
+
+console.log(testDefaultReturn());
 
 
 
