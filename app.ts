@@ -1,14 +1,14 @@
-// let myName: string = "Max";
-// let myAge: number = 27;
+namespace MyMath {
+  const PI = 3.14;
 
-// let anything;
-// anything = 12;
+  export function calculateCircumference(diameter: number) {
+    return diameter * PI;
+  }
 
-// function controlMe(isTrue: boolean, somethingElse: boolean) {
-//   let result: number;
-//   if (isTrue) {
-//     result = 12;
-//   }
-//   result = 33;
-//   return result;
-// }
+  export function calculateRectangle(width: number, length: number) {
+    return width * length;
+  }
+}
+
+console.log(MyMath.calculateRectangle(10, 20));
+console.log(MyMath.calculateCircumference(3));

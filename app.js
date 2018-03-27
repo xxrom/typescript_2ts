@@ -1,13 +1,14 @@
-"use strict";
-// let myName: string = "Max";
-// let myAge: number = 27;
-// let anything;
-// anything = 12;
-// function controlMe(isTrue: boolean, somethingElse: boolean) {
-//   let result: number;
-//   if (isTrue) {
-//     result = 12;
-//   }
-//   result = 33;
-//   return result;
-// }
+var MyMath;
+(function (MyMath) {
+    var PI = 3.14;
+    function calculateCircumference(diameter) {
+        return diameter * PI;
+    }
+    MyMath.calculateCircumference = calculateCircumference;
+    function calculateRectangle(width, length) {
+        return width * length;
+    }
+    MyMath.calculateRectangle = calculateRectangle;
+})(MyMath || (MyMath = {}));
+console.log(MyMath.calculateRectangle(10, 20));
+console.log(MyMath.calculateCircumference(3));
