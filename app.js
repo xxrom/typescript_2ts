@@ -1,10 +1,13 @@
 var MyMath;
 (function (MyMath) {
-    var PI = 3.14;
-    function calculateCircumference(diameter) {
-        return diameter * PI;
-    }
-    MyMath.calculateCircumference = calculateCircumference;
+    var Circle;
+    (function (Circle) {
+        var PI = 3.14;
+        function calculateCircumference(diameter) {
+            return diameter * PI;
+        }
+        Circle.calculateCircumference = calculateCircumference;
+    })(Circle = MyMath.Circle || (MyMath.Circle = {}));
 })(MyMath || (MyMath = {}));
 var MyMath;
 (function (MyMath) {
@@ -15,9 +18,14 @@ var MyMath;
 })(MyMath || (MyMath = {}));
 /// <reference path="circleMath.ts" />
 /// <reference path="rectangleMath.ts" />
+var CircleMath = MyMath.Circle;
 var PI = 2.99;
 console.log(MyMath.calculateRectangle(10, 20));
-console.log(MyMath.calculateCircumference(3));
+console.log(MyMath.Circle.calculateCircumference(4));
+console.log(CircleMath.calculateCircumference(4));
 console.log(PI);
 // создаем один бандл и его загружаем в index.html
 // tsc --outFile app.js circleMath.ts rectangleMath.ts app.ts
+// через референс если указать файлы, то можно одной командой
+// /// <reference path="rectangleMath.ts" />
+// tsc app.ts --outFile app.js
